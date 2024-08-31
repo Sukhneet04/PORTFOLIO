@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sukhneet Kaur - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>Sukhneet Kaur</h1>
+            <nav>
+                <ul>
+                    <li><a href="#profile">Profile</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Profile Section -->
+    <section id="profile">
+        <div class="container">
+            <h2>Profile</h2>
+            <p>"Creative and detail-oriented professional with a background in security and a passion for technology. Skilled in web development, problem-solving, and effective communication. Experienced in building dynamic websites and interactive applications. Currently transitioning into tech with a strong foundation in computer science and software development."</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <!-- News Website Project -->
+            <div class="project-item">
+                <h3>News Website</h3>
+                <p>Developed a dynamic news website using React, HTML, CSS, and JavaScript. The website features real-time news updates fetched from an API, responsive design, and user-friendly navigation.</p>
+                <ul>
+                    <li>Built with React for a modular, component-based architecture.</li>
+                    <li>Integrated a news API to display the latest news articles in various categories.</li>
+                    <li>Implemented search functionality and dynamic filtering of news topics.</li>
+                </ul>
+            </div>
+            <!-- Tic Tac Toe Game Project -->
+            <div class="project-item">
+                <h3>Tic Tac Toe Game</h3>
+                <p>Created an interactive Tic Tac Toe game using React. The game features a clean interface, supports both two-player and single-player modes, and includes basic AI functionality.</p>
+                <ul>
+                    <li>Developed with React to manage game state efficiently using hooks.</li>
+                    <li>Implemented AI for single-player mode, allowing users to play against the computer.</li>
+                    <li>Used React components for modular and reusable code.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <div class="container">
+            <h2>Education</h2>
+            <ul>
+                <li>Computer Software and Database Development | December 2024 | Loyalist College, Toronto, ON, Canada</li>
+                <li>Bachelor's in Computer Science | May 2022 | Khalsa College, Amritsar, Punjab, India</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2>Skills & Abilities</h2>
+            <ul>
+                <li>HTML, CSS, JavaScript</li>
+                <li>Responsive Web Design</li>
+                <li>API Integration</li>
+                <li>CCTV Surveillance</li>
+                <li>Access Control and Attentive</li>
+                <li>First Aid and CPR Certified</li>
+                <li>Emergency Response</li>
+                <li>Adaptability and Flexibility</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container contact-container">
+            <h2>Contact Me</h2>
+            <div class="contact-details">
+                <p>Feel free to reach out to me for collaborations, inquiries, or just a friendly hello! I'm excited to connect with like-minded professionals and explore new opportunities.</p>
+            </div>
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Sukhneet Kaur. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Email Validation -->
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            const emailInput = document.getElementById('email').value;
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; // Validates general email format
+            const disallowedDomain = /\.in$/; // Disallow emails ending with .in
+
+            if (!emailPattern.test(emailInput) || disallowedDomain.test(emailInput)) {
+                alert('Please enter a valid email address that does not end with ".in".');
+                event.preventDefault(); // Prevents form from being submitted
+            }
+        });
+    </script>
+</body>
+</html>
